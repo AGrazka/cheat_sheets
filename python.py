@@ -23,6 +23,7 @@ list comprehensions z warunkiem - [(x, y) for x in [1,2,3] for y in [3,1,4] if x
 """
 # TUPLE
 tup = ()                # tuple są niemodyfikowalne
+tup += ("a", "b")       # dodawanie do tupli
 
 # SETS
 a = set("abacadb")      # zwraca zbiór znaków {'a', 'b', 'c', 'd' ale nie dubluje
@@ -44,6 +45,25 @@ sorted(dic)             # sortuje elemnty listy ze słownika
 
 dict([(1, "a"), (2, "b"), (3, "c")])  # tworzy słownik {1: "a", 2: "b", 3: "c"}
 
+
+# SPOSOBY UŻYWANIA PĘTLI
+for k, v in dic.items():  # pozwala dostać się do klucza i wartości jednocześnie
+    print(k, v)
+
+for i, v in enumerate(['a', 'b', 'c']):  # wypisuje z kolejnymi numerami
+    print(i, v)
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):    # iteruje przez dwie pętle naraz
+    print(f'What is your {q}?  It is {a}.')
+
+for i in reversed(range(1, 10, 2)):  # iteruje od końca
+    print(i)
+
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for f in sorted(set(basket)):   # iteruje przez posortowaną listę, nie zmienijąc początkowej
+    print(f)
 
 if __name__ == "__main__":
     print(lis.index("x1"))
