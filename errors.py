@@ -18,9 +18,9 @@ class Error(Exception):  # własny wyjątek
     pass
 
 
-def divide(x, y):
+def divide(z, y):
     try:
-        result = x / y
+        result = z / y
     except ZeroDivisionError:
         print("division by zero!")
     else:
