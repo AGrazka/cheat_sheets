@@ -1,0 +1,214 @@
+selektor {							- element, id, class, 
+	...								- reguły do zastosowania dla danego selektora
+}
+
+p {									- odwołuje się do paragrafu
+}
+
+#intro {							- odnosi się tylko do elementów z id "intro"
+}
+
+.content{							- odnosi się do elementów o klasie "content"
+}
+
+p.backgroud {						- odnosi się do paragrafu z klasą background
+}
+
+.box a {}							- odnosi się do elementu a w elemencie o klasie box
+
+.box.colorRed						- element o klasie box i klasie colorRed
+
+.box#red 							- element o box i id red
+
+.box p a 							- element a w p w klasie box
+
+{
+
+Wyświetlanie elementu
+	display: block; 				- wyświetla element w postaci blokowej
+	display: inline; 				- wyświetla element w postaci liniowej
+	display: none; 					- nie wyświetla elementu
+	display: inline-block; 			- zachowuje właściwości blokowe, ale wyświetla się liniowo
+
+Box model (px, em)							em w zależności od wielkości czcionki??
+	width: ...px;					- całkowita bezwzględna szerokość elementu
+	height: ...px;					- całkowita wysokość elementu
+
+	border: .. .. ..;				- obramowanie: grubość styl kolor;
+
+Style 
+		dotted						- kropkowane
+		dashed						- kreskowane
+		solid						- ciągłe
+		double						- podwójna linia
+
+	padding: ...;					- odległość od zawartości do bordera
+	margin: ...;					- odległość od obramowania do następnego boxa w każdym kierunku
+	margin: .. ..;					- odległości horyzontalne i wertykalne
+	margin: .. .. .. ..;			- odległości dla każdej ze stron z osobna
+	padding: .. .. .. ..;
+	...-top: ...;					- odległość dla jednej ze stron (right, bottom, left)
+
+	overflow: ...;					- określa co się dzieje kiedy zawartość przekracza wartość elementu
+		visible
+		hidden
+		auto
+		scroll
+		inherit
+	
+	float: ...;						- ustawia element w jednej linii, z lewej albo prawej, opływa
+		right
+		left 	
+	clear: ...;						- wraca do naturalnego biegu 
+		right 						- zsuwamy elementy poniżej wszystkich float: right
+		left 						- zsuwamy elementy poniżej wszystkich float: left
+		both 						- zsuwamy elementy poniżej wszystkich float
+
+Kolory								- po nazwie, RGB, HSL, heksadecymalna
+	color:...;
+	color: rgb(.., .., ..,);
+	color: rgba(.., .., .., .xx);	- rgb + przezroczystość w ułamku po kropce 1 - 100%
+	color: hsl(.., .., ..,);
+	color: hsla(.., .., .., .xx);	- hsl w % + przezroczystość w ułamku po kropce
+	color: #......;					- wartość heksadecymalna
+
+Jednostki
+	px 								- 1/96 cala
+	%								- procent wielkości 'rodzica'
+	em 								- równa średniemu elementowi z czcionki (em*font-size)
+
+Text
+	color:...;
+
+	font-family: "nazwa", zapasowa, rodzina(sans-serif);	- wybiera czcionkę
+		serif
+		sans-serif
+		monospace
+		cursive
+		fantasyw
+
+	font-size: ..px;				- określa wielkośc czcionki
+
+	font-style: ...;				- do pochylaniali
+		normal
+		italic
+		oblique
+		inherit
+
+	font-weight: ...;				- do pogrubiania
+		normal
+		bold 
+		bolder 
+		inherit
+		wartość liczbowa (100-900 co 100, 700 to bold)
+
+	line-height: ...;				- interlinia
+
+	text-align: ...;				- horyzontalne ułożenie tekstu w elemencie blokowym
+		left 
+		right 
+		center
+		justify 	
+		inherit
+
+	text-decoration: ...;			- podkreślenie, przekreślenie
+		none
+		underline
+		overline
+		line-through
+		inherit
+
+	text-indent: ...px;				- wysunięcie pierwszego słowa
+
+	text-shadow: x y blur Kolor;	- cień tekstu
+
+	text-transform: ...;			- zmiana wielkości liter
+		none
+		capitalize
+		uppercase
+		lowercase
+		inherit
+
+	letter-spacing: ...px;			- odległość między literami (ujemna przybliża)
+	word-spacing: ...px;			- odległość między wyrazami (ujemna przybliża)
+
+	background-color: ...;			- kolor tła, określa się tak jak przy zwykłym kolorze
+
+Przezroczystość tła
+	{
+	background-color: #b2b2b2;
+	background-color: rgba(0, 0, 0, .3);	
+	}
+
+Gradient liniowy
+	{	
+		background-color: red;		- dla nieobsługującyh gradientów
+		background-image: 
+			linear-gradient(180deg,		- kąt
+							red,		- 1 kolor
+							yellow);	- 2 kolor
+	}
+
+Gradient kołowy
+	{	
+		background-color: red;		- dla nieobsługującyh gradientów
+		background-image: 
+			linear-gradient (circle,		- kąt
+							red,		- 1 kolor
+							yellow);	- 2 kolor
+}
+Obrac jako tło
+	.image_back {
+		background-color: red;
+		background-image: url(../images/background.png); 	- dwie kropki żeby wyjść z css i potem wejsc w images
+	}
+{
+	background-repeat: ...;			- powtarza tło na całej stronie
+		repeat-x					- powtarza w poziomie
+		repeat-y					- powtarza w pionie
+		no-repeat					- bez powatarzania
+
+	background-position: ...;		- wyznacza gdzie wyświetli obrazek (px, %, słowa kluczowe, mozna łączyć)
+		top
+		right 
+		bottom 
+		center 
+
+	border-radius: ..%;				- ustawia zaokrąglenia boksu
+
+	box-shadow: poł poł rozmycie rozszerzenie kierunek;	- cień pod elementem
+	box-shadow: -5px -5px 10px 10px #888;
+
+Filtry
+	blur 
+	brightness
+	contrast 
+	greyscale
+	sepia 
+
+Stylowanie list
+	list-style-type: ...; 			- s=określa znacznik
+		none
+		disc
+		circleq
+		square
+		decimal
+		decimal-leading-zero
+		lower-roman
+		upper-roman
+
+	display: inline-block;			- wyświetla listę horyzontalnie
+	margin 0 20px			
+
+table, th, td {
+    border: 1px solid black;		- obramowanie w tabelach
+}		
+
+{
+	border-collapse: ...;			- zmienia wyświetlanie krawędzi
+		collapse 					- łączy krawędzie
+		separe						- powoduje dublowanie krawędzi
+		inherit						- bierze wartość od rodzica
+	border-spacing:..px;			- określa przerwę pomiedzy krawędziami
+
+	

@@ -1,0 +1,128 @@
+<!-- ... -->							- komentarzx
+
+<... atrybut="wartość"> ... </...> 		- zawsze w otwierającym
+
+<!DOCTYPE html> 						- zawsze na początek, informuje, że to html do wyświetlenia
+
+<html> ... </html>						- pomiędzy cała treśc strony
+
+<html lang="język-KRAJ"> ... 			- określa używany język
+	
+<head> ... </head>						- nagłówek i ustawienia
+
+<meta charset="...">					- ustawienia kodowania strony, np. polskie znaki (UTF-8)
+
+<meta name="description" content="...">	- opisuje stronę, istotny dla SEO (max 160 znaków)
+
+<meta name="viewport" content="width=device-width", initial-scale=1">	- szerokość strony
+
+<title>...</title>						- tytuł na karcie strony, SEO (max 65 znaków)
+
+<body>...</body>						- to co widzimy na stronie
+
+<div>...</div>							- blokowy element HTML
+
+<span>...</span>						- obejmuje mniejsze fragmenty kodu
+
+<h1-6>...</h1-6>						- nagłówki, 1 najważniejszy, 6 najmniej
+
+<p>...</p> 								- paragraf, tekst lub tag HTML
+
+&...;									- znaki specjalne
+
+<br> 									- przełamanie linii, kończy bieżącą linię i zaczyna nową
+
+<sup>...</sup>							- indeks górny
+<sub>...</sub>							- indeks dolny
+
+<ol>...</ol>							- uporządkowana lista, elementy mają kolejność oznaczoną liczbami
+<ul>...</ul>							- nieuporządkowana lista, el. oznaczone kropkami (CSS)
+	<li>...</li>						- element ol i li 
+
+<dl>...</dl>							- lsita definicji, pary pojęcie-definicja
+	<dt>...</dt>						- pojęcie, może mieć wiele definicji
+	<dd>...</dd>						- definicja, może opisywać wiele pojęć
+
+<a href="adres">wyświetlany tekst</a>	- hiperłącze
+<a href="adres" rel="nofollow">...</a>	- bot indeks. nie podnosi rangi strony w adresie (np. reklamy)
+<a href="adres" target="_blank">...</a>	- link otwiera się w nowej karcie
+<a href="adres" target="_self">...</a>	- link otwiera się w tej samej karcie (domyślne)
+<a href="adres"><img src="obrazek"></a>	- link w obrazku
+
+<iframe src="adres"></iframe>			- umieszcza stronę z adresu w pływającej ramce
+
+<p id="sekcja1">...</p>					- sekcje do nawigacji po stronie
+<a href="#sekcja1">...</a>				- tworzy link do sekcji
+
+<a href="subpage.html">...</a>			- link do podstrony - nazwa pliku w adresie
+
+<img src="położenie obrazka">			- umieszcza grafikę (JPG, PNG, GIF)
+<img src="adres" width=".." height="w">	- pkreśla szerokość i wysokośc umieszczanego obrazka
+<img src="adres" alt="opis">			- opisuje obrazek, istotny dla indeksowania grafik google 
+<img src="adres" title="tytuł">			- wyświetla się po najechaniu na obrazek, istotny dla indeks.
+
+<table>...</table>						- tabela, krawędzie domyślnie się nei wyświetlają (CSS)
+	<tr>...</tr>						- jeden rząd
+	<td>...</td>						- jedna komórka
+	<th>...</th>						- nagłówek kolumny domyslnie pogrubiony; tak samo jak 4<td></td>
+	<th scope="col">...</th>			- zasięg, nagłówek kolumny
+	<th scope="row">...</th>			- zasięg, nazwa wiersza
+	<th colspan="liczba"></th>			- określa ile kolumn ma zajmować komórka
+	<th rowspan="liczba"></th>			- określa ile wierwszy ma zajmować komórka
+	<thead>...</thead>					- nagłówek tabeli, umieszczamy nagłówki kolumn
+	<tbody>...</tbody>					- ciało tabeli
+	<tfoot>...</tfoot>					- stopka tabeli, umieszczamy podsumowanie
+
+<h1 id="identyfikator">...</h1>			- 1 el. - 1 id. 
+<h1 class="id1 id2 id3">...</h1>		- wiele klas - wiele el. oddzielone przerwa
+
+<link rel="stylesheet" href="css/style.css">	- <head>adres pliku css</head>
+
+Formularze(
+<form>...</form>						- tworzy formularz
+
+Inputy
+	text 								- dane
+	email								- mail
+	number								- liczba np. osób
+	date								- data
+	url									- adres strony
+	password							- hasło, wyświetla kropki
+	submit								- przycik wysłania
+
+<label for="nazwa etykiery"> opis tego co ma wpisać</label>
+<input type="rodzaj inputu" id="ta sama nazwa etykiety" >					- tworzy okienko do wpisania
+lub
+<label>opis
+	<input type="rodzaj inputu" name="nazwa etykiety">
+</label>
+
+<form action="/" method="POST">...</form>		- do jakiej strony prześle i jaką metodą
+<form method="POST">...</form>				- przesyła na stronę na której jesteś
+<form name="">...</form>					- nazwa OBOWIĄZKOWA, określa pod jakim kluczem będzie input
+
+
+<input type="text" name="login" placeholder="Bez polskich znaków">		- placeholder- opis w okienku
+<input type="submit" name="registeruser" value="Zarejestruj się">		- przycisk z opisem
+
+<fieldset>...</fieldset>				- rysuje ramkę wokół ...
+<legend>...</legend>					- wspólna nazwa to ...
+
+<input type="ckeckbox" name="agreement">		- box do zaznaczania
+<input type="checkbox" name="zamawiam" checked> - domyślnie zaznaczony
+<input type="radio" name="seats" value="window"> - wybór jednokrotny
+
+<label>Pierwszeństwo wejścia na pokład				- ta sama wartość name = jeden Formularze
+<input type="checkbox" name="extras" value="priorityboarding">
+<label>Ubezpieczenie bagażu podróżnego		
+<input type="checkbox" name="extras" value="luggageinsurance">
+
+<label>Przy oknie
+    <input type="radio" name="seats" value="window">	- wybiera jedną wartość dla tych samych name
+</label><br>
+<label>Przy korytarzu	
+    <input type="radio" name="seats" value="corridor">
+
+<textarea cols="..." rows="..."></textarea>	- pole tekstowe, liczba kolumn i wierszy
+
+)
